@@ -1,0 +1,60 @@
+
+body{
+    font-family: "Inter", serif;
+    font-size: 32px;
+}
+.flexbox-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    max-width: 912px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+.left-column{
+    width: 484px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 67px;
+}
+.right-column{
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+}
+.expenses__name, .expenses__limit, .expenses__total, .expenses__status, .expenses__history{
+    line-height: 39px;
+    font-weight: 700;
+}
+.expenses__limit{
+    margin-top: 51px;
+}
+.expenses__total{
+    margin-top: 13px;
+}
+.expenses__status{
+    margin-top: 35px;
+}
+.expenses__input{
+    margin-top: 41px;
+    line-height: 39px;
+    height: 58px;
+    font-size: 32px;
+}
+.expenses__history{
+    margin-top: 43px;
+}
+.button{
+    background-color: #0094FF;
+    width: 370px;
+    height: 58px;
+    border: none;
+    color: #fff;
+    line-height: 39px;
+    border-radius: 10px;
+    margin-top: 147px;
+}
+.button:active{
+    opacity: 75%;
+}
