@@ -14,9 +14,11 @@ buttonNode.addEventListener('click', () => {
         console.log('error');
         return;
     }
-    saveNumberToArr(money);
-    let total = calcNumberArr();
-    renderTotal(total);
+    saveNumberToArr(money); // Сохраняет в массив число.
+    let total = calcNumberArr(); // Сумму массива сохр.
+    renderTotal(total); // Выводит полную сумму всех введеных значений.
+    renderHistory(money); // Выводит историю трат.
+
     inputNode.value = '';
 })
 
@@ -27,7 +29,6 @@ function convertToNumber(inputNode){
 function saveNumberToArr(money){
     userValue.push(money);
 }
-
 function calcNumberArr(){
     let result = 0;
     userValue.forEach(function(any){
@@ -36,6 +37,13 @@ function calcNumberArr(){
     return result;
 }
 
-function renderTotal(total){ // Выводит полную сумму всех введеных значений.
+function renderTotal(total){
     totalNode.textContent = total + 'руб.';
+};
+
+function renderHistory(value){
+    let newItemHistory = document.createElement('li');
+    newItemHistory.className = 'expenses__history-item';
+    newItemHistory.textContent =  value;
+    historyNode.append(newItemHistory);
 };
