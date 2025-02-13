@@ -67,3 +67,8 @@ body{
 .js-total{
     
 }
+
+.error-js{
+    display: none;
+    color: red;
+}
